@@ -7,6 +7,8 @@ import {
   VStack,
   useBreakpointValue,
   Heading,
+  Divider,
+  Center,
 } from "@chakra-ui/react";
 
 const Home = () => {
@@ -25,7 +27,15 @@ const Home = () => {
         px={useBreakpointValue({ base: 4, md: 8 })}
         bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       >
-        <Stack maxW={"2xl"} align={"center"} spacing={6}>
+        <Stack
+          justify={"center"}
+          maxW={"2xl"}
+          align={"center"}
+          spacing={6}
+          bg={"blackAlpha.600"}
+          borderRadius={"2em"}
+          py={{ base: 6, md: 10 }}
+        >
           <Heading
             alignContent={"center"}
             color={"white"}
@@ -36,13 +46,16 @@ const Home = () => {
             I'm Norris Luong
           </Heading>
           <Text
+            textAlign={"center"}
             color={"white"}
-            fontWeight={700}
+            // fontWeight={300}
             lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: "2xl", md: "3xl" })}
+            fontSize={useBreakpointValue({ base: "xl", md: "2xl" })}
           >
             I'm a full stack web devloper based in Sydney Australia.
           </Text>
+          <Divider />
+          <Center></Center>
         </Stack>
       </VStack>
     </Flex>

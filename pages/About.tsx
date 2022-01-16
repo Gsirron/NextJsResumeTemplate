@@ -13,58 +13,71 @@ import {
   SimpleGrid,
   Grid,
   GridItem,
+  useColorModeValue,
+  Center,
+  Spacer,
 } from "@chakra-ui/react";
 
 import React from "react";
+import Link from "next/link";
 
 const About = () => {
   return (
-    <Box bg={"gray.800"} position={"relative"}>
-      <Flex
-        flex={1}
-        zIndex={0}
-        display={{ base: "none", lg: "flex" }}
-        backgroundSize={"cover"}
-        backgroundPosition="center"
-        backgroundRepeat="no-repeat"
-        position={"absolute"}
-        width={"50%"}
-        insetY={0}
-        right={0}
-      >
-        <Flex
-          bgGradient={"linear(to-r, gray.800 10%, transparent)"}
-          w={"full"}
-          h={"full"}
-        />
-      </Flex>
-      <Container maxW={"4xl"} zIndex={2} position={"relative"}>
+    <Flex bg={useColorModeValue("gray.100", "gray.900")} w={"100%"}>
+      <Box as={Container} maxW={"5xl"} pb={"40px"}>
         <Grid
           m={{ base: 8, md: 20 }}
           h="200px"
-          templateRows="repeat(2, 1fr)"
-          templateColumns="repeat(3, 1fr)"
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            sm: "repeat(3, 1fr)",
+            md: "repeat(3, 1fr)",
+          }}
           gap={{ base: 4, md: 10, xl: 10 }}
         >
           <GridItem rowSpan={2} colSpan={1}></GridItem>
           <GridItem colSpan={2}>
-            <Heading
-              color={"white"}
-              mb={4}
-              fontSize={{ base: "2xl", md: "4xl" }}
-            >
-              About Me
+            <Heading mb={4} fontSize={{ base: "2xl", md: "3xl" }}>
+              About me
             </Heading>
-            <Text fontSize={"xl"} color={"gray.400"}>
+            <Text fontSize={"lg"}>
               The NewLife™ technology allows you to monitor your crops and get
               complete insights at real time. The proprietary software/hardware
               ecosystem prevents your plants from getting neglected.
             </Text>
           </GridItem>
-          <GridItem colSpan={2}></GridItem>
+          <GridItem colSpan={2}>
+            <Stack
+              py={{ base: 4, md: 10 }}
+              direction={{ base: "column", md: "row" }}
+            >
+              <VStack align={"left"}>
+                <Heading fontSize={{ base: "xl", md: " 3xl" }}>Contact</Heading>
+                <Text pt={"4px"}>
+                  Norris Luong <br /> Australia <br /> Chipping Norton NSW 2170
+                </Text>
+                <Text>0478162776</Text>
+                <Link href="mailto:norris.luong@hotmail.com">
+                  Norris.luong@hotmail.com
+                </Link>
+              </VStack>
+              <Box p={"10px"}>
+                <Box
+                  px={"20px"}
+                  as="button"
+                  h={"50px"}
+                  borderRadius={"md"}
+                  bg={"green.500"}
+                  fontWeight={700}
+                >
+                  Download Resume
+                </Box>
+              </Box>
+            </Stack>
+          </GridItem>
         </Grid>
-      </Container>
-    </Box>
+      </Box>
+    </Flex>
   );
 };
 

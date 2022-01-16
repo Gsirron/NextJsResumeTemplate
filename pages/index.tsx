@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Box, VStack } from "@chakra-ui/react";
+import { Box, Container, VStack } from "@chakra-ui/react";
 import Home2 from "./Home";
 import About from "./About";
 import { Element } from "react-scroll";
