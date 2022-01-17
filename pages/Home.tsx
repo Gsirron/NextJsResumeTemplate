@@ -9,6 +9,7 @@ import {
   Heading,
   Divider,
   Center,
+  Container,
 } from "@chakra-ui/react";
 
 const Home = () => {
@@ -22,19 +23,20 @@ const Home = () => {
       backgroundImage={"/images/frontbg2.jpg"}
     >
       <VStack
+        as={Container}
+        maxW={"5xl"}
         w={"full"}
         justify={"center"}
         px={useBreakpointValue({ base: 4, md: 8 })}
-        bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       >
         <Stack
-          justify={"center"}
           maxW={"2xl"}
-          align={"center"}
+          textAlign={"center"}
           spacing={6}
           bg={"blackAlpha.600"}
           borderRadius={"2em"}
           py={{ base: 6, md: 10 }}
+          px={{ base: 0, md: 10 }}
         >
           <Heading
             alignContent={"center"}

@@ -31,7 +31,7 @@ const Header3 = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <VStack>
+    <VStack zIndex={10}>
       <Center
         w="100%"
         position="fixed"
