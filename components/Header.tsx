@@ -36,7 +36,7 @@ const Header3 = () => {
         w="100%"
         position="fixed"
         as="header"
-        bg={useColorModeValue("gray.100", "gray.900")}
+        bg={useColorModeValue("gray.300", "gray.900")}
         px={4}
       >
         <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>

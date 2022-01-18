@@ -25,7 +25,7 @@ import { FaDownload } from "react-icons/fa";
 
 const About = () => {
   return (
-    <Flex bg={useColorModeValue("gray.100", "gray.900")} pr={"5%"}>
+    <Flex bg={useColorModeValue("gray.300", "gray.900")} pr={"5%"}>
       <Box as={Container} maxW={"5xl"}>
         <Grid
           m={{ base: 8, md: 20 }}
