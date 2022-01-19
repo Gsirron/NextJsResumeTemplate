@@ -10,6 +10,7 @@ import {
   Divider,
   Center,
   Container,
+  useBreakpoint,
 } from "@chakra-ui/react";
 
 const Home = () => {
@@ -27,7 +28,7 @@ const Home = () => {
         maxW={"5xl"}
         w={"full"}
         justify={"center"}
-        px={useBreakpointValue({ base: 4, md: 8 })}
+        px={{ base: 4, md: 8 }}
       >
         <Stack
           maxW={"2xl"}
@@ -43,20 +44,20 @@ const Home = () => {
             color={"white"}
             fontWeight={700}
             lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: "4xl", md: "6xl" })}
+            fontSize={{ base: "4xl", md: "6xl" }}
           >
-            I'm Norris Luong
+            I'm Norris Luongqa
           </Heading>
           <Text
             textAlign={"center"}
             color={"white"}
             // fontWeight={300}
             lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: "xl", md: "2xl" })}
+            fontSize={{ base: "xl", md: "2xl" }}
           >
             I'm a full stack web devloper based in Sydney Australia.
           </Text>
-          <Divider />
+          <Divider position={"static"} />
           <Center></Center>
         </Stack>
       </VStack>

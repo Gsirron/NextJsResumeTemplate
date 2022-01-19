@@ -30,7 +30,7 @@ const test = [
     date: "2017 - 2020",
   },
   {
-    heading: "University of Western Sydney",
+    heading: "University of Western Sydney2",
     name: "Bachelor of Computer Science",
     text: "did work here",
     date: "2017 - 2020",
@@ -58,7 +58,7 @@ export const Resume = () => {
               </Heading>
             </GridItem>
             {test.map((iteminfo) => (
-              <ResumeProps {...iteminfo} />
+              <ResumeProps key={iteminfo.heading} {...iteminfo} />
             ))}
           </Grid>
           <Divider />
@@ -78,9 +78,9 @@ export const Resume = () => {
                 WORK
               </Heading>
             </GridItem>
-            {test.map((iteminfo) => (
+            {/* {test.map((iteminfo) => (
               <ResumeProps {...iteminfo} />
-            ))}
+            ))} */}
           </Grid>
           <Divider />
 

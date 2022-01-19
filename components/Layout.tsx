@@ -9,9 +9,9 @@ type DashboardLayoutProps = {
 
 const Layout = ({ children }: DashboardLayoutProps) => {
   return (
-    <Box id="mainlayout">
+    <Box>
       <Header />
-      <Box id="childlayout">{children}</Box>
+      <Box>{children}</Box>
     </Box>
   );
 };

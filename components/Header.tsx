@@ -21,7 +21,7 @@ import Navlink from "./Navlink";
 const Links = [
   "Home",
   "About",
-  "Resmue",
+  "Resume",
   "Projects",
   "Testimonials",
   "Contact",
@@ -36,7 +36,7 @@ const Header3 = () => {
         w="100%"
         position="fixed"
         as="header"
-        bg={useColorModeValue("gray.300", "gray.900")}
+        bg={useColorModeValue("gray.400", "gray.900")}
         px={4}
       >
         <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
