@@ -46,7 +46,7 @@ const Home = () => {
             lineHeight={1.2}
             fontSize={{ base: "4xl", md: "6xl" }}
           >
-            I'm Norris Luongqa
+            I'm Norris Luong
           </Heading>
           <Text
             textAlign={"center"}

@@ -4,6 +4,7 @@ import Home2 from "./Home";
 import About from "./About";
 import { Element } from "react-scroll";
 import Resume from "./Resume";
+import { Projects } from "./Projects";
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,9 @@ const Home: NextPage = () => {
       </Element>
       <Element id="Resume" name="Resume">
         <Resume />
+      </Element>
+      <Element id="Projects" name="Projects">
+        <Projects />
       </Element>
     </Box>
   );

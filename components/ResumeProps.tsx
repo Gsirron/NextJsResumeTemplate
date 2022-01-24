@@ -2,26 +2,27 @@ import React from "react";
 
 import { GridItem, Flex, Box, Heading, Text } from "@chakra-ui/react";
 
-interface ResumeProps {
+interface IResumeProps {
   heading: string;
   name: string;
   text: string;
   date: string;
 }
 
-export const ResumeProps = (props: ResumeProps) => {
+export const ResumeProps = (props: IResumeProps) => {
   const { heading, name, text, date } = props;
   return (
     <GridItem colSpan={2}>
       <Heading>{heading}</Heading>
-      <Flex>
-        <Heading fontSize={{ base: "md", md: "lg" }} as={"h3"}>
-          {name}&nbsp;•&nbsp;
-        </Heading>
-        <Heading fontSize={{ base: "md", md: "lg" }} as={"h3"}>
-          {date}
-        </Heading>
-      </Flex>
+      <Heading
+        fontStyle={"italic"}
+        fontWeight={350}
+        fontSize={{ base: "md", md: "lg" }}
+        size="lg"
+        lineHeight={1}
+      >
+        {`${name} • ${date}`}
+      </Heading>
       <Text>{text}</Text>
     </GridItem>
   );

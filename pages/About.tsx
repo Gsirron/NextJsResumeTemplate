@@ -17,6 +17,7 @@ import {
   Center,
   Spacer,
   Link,
+  Avatar,
 } from "@chakra-ui/react";
 
 import React from "react";
@@ -37,7 +38,13 @@ const About = () => {
           gap={{ base: 4, md: 10, xl: 10 }}
           mx={"10px"}
         >
-          <GridItem rowSpan={2} colSpan={1}></GridItem>
+          <GridItem rowSpan={2} colSpan={1} mx={"auto"}>
+            <Avatar
+              position={"static"}
+              src="/images/skill_logos/java.svg"
+              size="xl"
+            />
+          </GridItem>
           <GridItem colSpan={2} w={"100%"}>
             <Heading mb={4} fontSize={{ base: "2xl", md: "3xl" }}>
               About me

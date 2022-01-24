@@ -37,6 +37,12 @@ const test = [
   },
 ];
 
+const test2 = {
+  image: "/images/skill_logos/cpp.svg",
+  title: "TEST 1",
+  text: "test stuff",
+};
+
 export const Resume = () => {
   return (
     <Flex bg={useColorModeValue("gray.200", "gray.800")}>
@@ -61,8 +67,7 @@ export const Resume = () => {
               <ResumeProps key={iteminfo.heading} {...iteminfo} />
             ))}
           </Grid>
-          <Divider />
-
+          <Divider borderBottom={"1px"} />
           <Grid
             w={"full"}
             templateColumns={{
@@ -82,8 +87,7 @@ export const Resume = () => {
               <ResumeProps {...iteminfo} />
             ))} */}
           </Grid>
-          <Divider />
-
+          <Divider borderBottom={"1px"} />
           <Grid
             w={"full"}
             templateColumns={{
@@ -100,30 +104,14 @@ export const Resume = () => {
               </Heading>
             </GridItem>
             <GridItem colSpan={3}>
-              <Text textAlign={"left"}>dogs are tasty at times</Text>
+              <Text textAlign={"left"}>Inser tech statment</Text>
             </GridItem>
             <GridItem colSpan={4}>
               <SimpleGrid columns={{ base: 1, md: 4 }}>
-                <ResmueSkillProps
-                  image={"/images/skill_logos/cpp.svg"}
-                  title={"TEST 1"}
-                  text={"test stuff"}
-                ></ResmueSkillProps>
-                <ResmueSkillProps
-                  image={"/images/skill_logos/cpp.svg"}
-                  title={"TEST 1"}
-                  text={"test stuff"}
-                ></ResmueSkillProps>
-                <ResmueSkillProps
-                  image={"/images/skill_logos/cpp.svg"}
-                  title={"TEST 1"}
-                  text={"test stuff"}
-                ></ResmueSkillProps>
-                <ResmueSkillProps
-                  image={"/images/skill_logos/cpp.svg"}
-                  title={"TEST 1"}
-                  text={"test stuff"}
-                ></ResmueSkillProps>
+                <ResmueSkillProps {...test2} />
+                <ResmueSkillProps {...test2} />
+                <ResmueSkillProps {...test2} />
+                <ResmueSkillProps {...test2} />
               </SimpleGrid>
             </GridItem>
           </Grid>

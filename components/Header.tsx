@@ -36,10 +36,11 @@ const Header3 = () => {
         w="100%"
         position="fixed"
         as="header"
-        bg={useColorModeValue("gray.400", "gray.900")}
-        px={4}
+        bg={useColorModeValue("gray.300", "gray.900")}
+        px={10}
+        borderBottom={"1px"}
       >
-        <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
+        <Flex h={"55px"} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
