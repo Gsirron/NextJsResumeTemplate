@@ -26,7 +26,7 @@ export const Projects = () => {
             <Heading>Check out some of my Projects</Heading>
           </Box>
           <SimpleGrid
-            spacing={{ base: 10, md: 20 }}
+            spacing={{ base: 10, md: "auto" }}
             columns={{ base: 1, md: 4 }}
           >
             <ProjectProps {...testProjectProps} />
