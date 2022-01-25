@@ -70,7 +70,7 @@ const Header3 = () => {
               {isOpen == false ? (
                 <Stack direction={"row"} spacing={7}>
                   <Button onClick={toggleColorMode}>
-                    {colorMode === "light" ? <FaMoon /> : <FaSun />}
+                    {colorMode === "dark" ? <FaMoon /> : <FaSun />}
                   </Button>
                 </Stack>
               ) : null}

@@ -1,6 +1,6 @@
-import { Box, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Center, Heading, Icon, Image, Text } from "@chakra-ui/react";
 import React from "react";
-
+import { AiOutlineLink } from "react-icons/ai";
 interface IProjectProps {
   ProjectImage: string;
   ProjectName: string;
@@ -11,20 +11,37 @@ interface IProjectProps {
 const ProjectProps = (props: IProjectProps) => {
   const { ProjectName, ProjectImage, ProjectDescription, ProjectLink } = props;
   return (
-    <Box pos={"relative"}>
-      <a href={ProjectLink}>
-        <Image
-          src={ProjectImage}
-          _hover={{
-            opacity: 0.3,
-          }}
-        />
-        <Box>
-          <Heading>{ProjectName}</Heading>
-          <Text>{ProjectDescription}</Text>
+    <a href={ProjectLink}>
+      <Box
+        _hover={{
+          ".inner": { opacity: 1 },
+          ".outer": { opacity: 0.3 },
+        }}
+      >
+        <Box
+          position={"absolute"}
+          className="inner"
+          pt={"10px"}
+          textAlign={"center"}
+          boxSize={"200px"}
+          sx={{ opacity: 0 }}
+        >
+          <Heading fontSize={{ base: "xl", md: "2xl" }}>{ProjectName}</Heading>
+          <Text fontSize={{ base: "md", md: "lg" }}>{ProjectDescription}</Text>
+          <Icon as={AiOutlineLink} boxSize={6} />
         </Box>
-      </a>
-    </Box>
+        <Box
+          position={"absolute"}
+          className="outer"
+          boxSize={"200px"}
+          pos={"relative"}
+          bgSize={"200px"}
+          bgImage={ProjectImage}
+          bgPosition={"center"}
+          bgRepeat={"no-repeat"}
+        ></Box>
+      </Box>
+    </a>
   );
 };
 

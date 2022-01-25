@@ -64,14 +64,15 @@ const About = () => {
               <VStack align={"left"}>
                 <Heading fontSize={{ base: "xl", md: " 3xl" }}>Contact</Heading>
                 <Text pt={"4px"}>
-                  Norris Luong <br /> Australia <br /> Chipping Norton NSW 2170
+                  Norris Luong <br />
+                  Australia <br /> Sydney NSW <br /> 0478162776
                 </Text>
                 <Link href="mailto:norris.luong@hotmail.com">
                   Norris.luong@hotmail.com
                 </Link>
               </VStack>
               <Box p={"10px"} pl={{ base: 0, md: 20 }}>
-                <a href="https://www.google.com">
+                <a href="https://www.google.com" target="_blank">
                   <Button
                     position={"static"}
                     leftIcon={<FaDownload />}
