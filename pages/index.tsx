@@ -5,7 +5,8 @@ import About from "./About";
 import { Element } from "react-scroll";
 import Resume from "./Resume";
 import { Projects } from "./Projects";
-
+import ContactForm from "./Contact";
+import Testimoinals from "./Testimonials";
 const Home: NextPage = () => {
   return (
     <Box>
@@ -20,6 +21,12 @@ const Home: NextPage = () => {
       </Element>
       <Element id="Projects" name="Projects">
         <Projects />
+      </Element>
+      <Element id="Testimoinals" name="Testimoinals">
+        <Testimoinals />
+      </Element>
+      <Element id="Contact" name="Contact">
+        <ContactForm />
       </Element>
     </Box>
   );

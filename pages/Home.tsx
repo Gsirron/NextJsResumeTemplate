@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Stack,
   Flex,
@@ -13,12 +13,30 @@ import {
   useBreakpoint,
 } from "@chakra-ui/react";
 
+const axios = require("axios");
 const Home = () => {
+  let [homeData, setHomeData] = useState<any[]>([]);
+
+  async function getHomeData() {
+    try {
+      const res = await axios.get("resumeData.json");
+      console.log(res.data.home);
+      setHomeData(res.data.home);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  useEffect(() => {
+    getHomeData();
+  }, []);
+
   return (
     <Flex
       w={"full"}
-      h={"100vh"}
+      h={"80vh"}
       flex={1}
+      // bgAttachment={"fixed"}
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
       backgroundImage={"/images/frontbg2.jpg"}
@@ -46,7 +64,7 @@ const Home = () => {
             lineHeight={1.2}
             fontSize={{ base: "4xl", md: "6xl" }}
           >
-            I'm Norris Luong
+            {`Hi I'm ${homeData.name}`}
           </Heading>
           <Text
             textAlign={"center"}
@@ -55,7 +73,7 @@ const Home = () => {
             lineHeight={1.2}
             fontSize={{ base: "xl", md: "2xl" }}
           >
-            I'm a full stack web devloper based in Sydney Australia.
+            {`I'm a ${homeData.occupation}`}
           </Text>
           <Divider position={"static"} />
           <Center></Center>

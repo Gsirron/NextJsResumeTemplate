@@ -33,8 +33,9 @@ const Header3 = () => {
   return (
     <VStack zIndex={10}>
       <Center
+        zIndex={10}
         w="100%"
-        position="fixed"
+        position={"fixed"}
         as="header"
         bg={useColorModeValue("gray.300", "gray.900")}
         px={10}

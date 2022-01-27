@@ -1,4 +1,12 @@
-import { Box, Center, Heading, Icon, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Heading,
+  Icon,
+  Image,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineLink } from "react-icons/ai";
 interface IProjectProps {
@@ -15,10 +23,10 @@ const ProjectProps = (props: IProjectProps) => {
       <Box
         _hover={{
           ".inner": { opacity: 1 },
-          ".outer": { opacity: 0.3 },
+          ".outer": { opacity: 0.2 },
         }}
       >
-        <Box
+        <VStack
           position={"absolute"}
           className="inner"
           pt={"10px"}
@@ -29,9 +37,8 @@ const ProjectProps = (props: IProjectProps) => {
           <Heading fontSize={{ base: "xl", md: "2xl" }}>{ProjectName}</Heading>
           <Text fontSize={{ base: "md", md: "lg" }}>{ProjectDescription}</Text>
           <Icon as={AiOutlineLink} boxSize={6} />
-        </Box>
+        </VStack>
         <Box
-          position={"absolute"}
           className="outer"
           boxSize={"200px"}
           pos={"relative"}
