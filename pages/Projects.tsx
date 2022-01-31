@@ -11,10 +11,10 @@ import React from "react";
 import ProjectProps from "../components/ProjectProps";
 
 const testProjectProps = {
-  ProjectImage: "/images/skill_logos/csharp.svg",
-  ProjectName: "testName",
-  ProjectDescription: "TestDescription",
-  ProjectLink: "",
+  projectImage: "/images/skill_logos/csharp.svg",
+  projectName: "testName",
+  projectDescription: "TestDescription",
+  projectLink: "",
 };
 
 export const Projects = () => {

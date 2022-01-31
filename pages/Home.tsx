@@ -12,25 +12,8 @@ import {
   Container,
   useBreakpoint,
 } from "@chakra-ui/react";
-
-const axios = require("axios");
+import ResumeData from "../components/resumeData";
 const Home = () => {
-  let [homeData, setHomeData] = useState<any[]>([]);
-
-  async function getHomeData() {
-    try {
-      const res = await axios.get("resumeData.json");
-      console.log(res.data.home);
-      setHomeData(res.data.home);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  useEffect(() => {
-    getHomeData();
-  }, []);
-
   return (
     <Flex
       w={"full"}
@@ -64,7 +47,7 @@ const Home = () => {
             lineHeight={1.2}
             fontSize={{ base: "4xl", md: "6xl" }}
           >
-            {`Hi I'm ${homeData.name}`}
+            {`I'm ${ResumeData.home.name}`}
           </Heading>
           <Text
             textAlign={"center"}
@@ -73,7 +56,7 @@ const Home = () => {
             lineHeight={1.2}
             fontSize={{ base: "xl", md: "2xl" }}
           >
-            {`I'm a ${homeData.occupation}`}
+            {`I'm a ${ResumeData.home.occupation} based in ${ResumeData.contact.city}`}
           </Text>
           <Divider position={"static"} />
           <Center></Center>

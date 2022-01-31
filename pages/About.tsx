@@ -23,6 +23,8 @@ import {
 import React from "react";
 import NextLink from "next/link";
 import { FaDownload } from "react-icons/fa";
+import ResumeData from "../components/resumeData";
+import Resume from "./Resume";
 
 const About = () => {
   return (
@@ -41,7 +43,7 @@ const About = () => {
           <GridItem rowSpan={2} colSpan={1} mx={"auto"}>
             <Avatar
               position={"static"}
-              src="/images/skill_logos/java.svg"
+              src={"/images/profileNL.jpg"}
               size="xl"
             />
           </GridItem>
@@ -49,12 +51,7 @@ const About = () => {
             <Heading mb={4} fontSize={{ base: "2xl", md: "3xl" }}>
               About me
             </Heading>
-            <Text fontSize={"md"}>
-              The NewLife™ technology allows you to monitor your crops and get
-              complete insights at real time. The proprietary software/hardware
-              ecosystem prevents your plants from getting neglected.
-              asdasdasdasdasdas asdasdasdasdasdasasdasda
-            </Text>
+            <Text fontSize={"md"}>{ResumeData.home.bio}</Text>
           </GridItem>
           <GridItem colSpan={2}>
             <Stack
@@ -64,15 +61,15 @@ const About = () => {
               <VStack align={"left"}>
                 <Heading fontSize={{ base: "xl", md: " 3xl" }}>Contact</Heading>
                 <Text pt={"4px"}>
-                  Norris Luong <br />
-                  Australia <br /> Sydney NSW <br /> 0478162776
+                  {ResumeData.home.name} <br />
+                  Australia <br /> Sydney NSW <br /> {ResumeData.contact.phone}
                 </Text>
-                <Link href="mailto:norris.luong@hotmail.com">
-                  Norris.luong@hotmail.com
+                <Link href={`mailto:${ResumeData.contact.email}`}>
+                  {ResumeData.contact.email}
                 </Link>
               </VStack>
               <Box p={"10px"} pl={{ base: 0, md: 20 }}>
-                <a href="https://www.google.com" target="_blank">
+                <a href={` ${ResumeData.contact.resume}`} target="_blank">
                   <Button
                     position={"static"}
                     leftIcon={<FaDownload />}

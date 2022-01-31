@@ -10,16 +10,16 @@ import {
 import React from "react";
 import { AiOutlineLink } from "react-icons/ai";
 interface IProjectProps {
-  ProjectImage: string;
-  ProjectName: string;
-  ProjectDescription: string;
-  ProjectLink: string;
+  projectImage: string;
+  projectName: string;
+  projectDescription: string;
+  projectLink: string;
 }
 
 const ProjectProps = (props: IProjectProps) => {
-  const { ProjectName, ProjectImage, ProjectDescription, ProjectLink } = props;
+  const { projectName, projectImage, projectDescription, projectLink } = props;
   return (
-    <a href={ProjectLink}>
+    <a href={projectLink}>
       <Box
         _hover={{
           ".inner": { opacity: 1 },
@@ -34,8 +34,8 @@ const ProjectProps = (props: IProjectProps) => {
           boxSize={"200px"}
           sx={{ opacity: 0 }}
         >
-          <Heading fontSize={{ base: "xl", md: "2xl" }}>{ProjectName}</Heading>
-          <Text fontSize={{ base: "md", md: "lg" }}>{ProjectDescription}</Text>
+          <Heading fontSize={{ base: "xl", md: "2xl" }}>{projectName}</Heading>
+          <Text fontSize={{ base: "md", md: "lg" }}>{projectDescription}</Text>
           <Icon as={AiOutlineLink} boxSize={6} />
         </VStack>
         <Box
@@ -43,7 +43,7 @@ const ProjectProps = (props: IProjectProps) => {
           boxSize={"200px"}
           pos={"relative"}
           bgSize={"200px"}
-          bgImage={ProjectImage}
+          bgImage={projectImage}
           bgPosition={"center"}
           bgRepeat={"no-repeat"}
         ></Box>

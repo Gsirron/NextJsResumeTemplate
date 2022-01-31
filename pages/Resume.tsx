@@ -21,6 +21,7 @@ import {
 import { FaAccusoft } from "react-icons/fa";
 import { ResumeProps } from "../components/ResumeProps";
 import ResmueSkillProps from "../components/ResumeSkillProps";
+import ResumeData from "../components/resumeData";
 
 const test = [
   {
@@ -63,7 +64,7 @@ export const Resume = () => {
                 EDUCATION
               </Heading>
             </GridItem>
-            {test.map((iteminfo) => (
+            {ResumeData.education.map((iteminfo) => (
               <ResumeProps key={iteminfo.heading} {...iteminfo} />
             ))}
           </Grid>
