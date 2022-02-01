@@ -23,7 +23,7 @@ const Links = [
   "About",
   "Resume",
   "Projects",
-  "Testimonials",
+  // "Testimonials",
   "Contact",
 ];
 

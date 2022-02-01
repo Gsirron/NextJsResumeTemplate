@@ -22,9 +22,9 @@ const Home: NextPage = () => {
       <Element id="Projects" name="Projects">
         <Projects />
       </Element>
-      <Element id="Testimoinals" name="Testimoinals">
+      {/* <Element id="Testimoinals" name="Testimoinals">
         <Testimoinals />
-      </Element>
+      </Element> */}
       <Element id="Contact" name="Contact">
         <ContactForm />
       </Element>

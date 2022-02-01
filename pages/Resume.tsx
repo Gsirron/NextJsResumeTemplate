@@ -22,6 +22,7 @@ import { FaAccusoft } from "react-icons/fa";
 import { ResumeProps } from "../components/ResumeProps";
 import ResmueSkillProps from "../components/ResumeSkillProps";
 import ResumeData from "../components/resumeData";
+import ResumeSkillProps from "../components/ResumeSkillProps";
 
 const test = [
   {
@@ -84,9 +85,9 @@ export const Resume = () => {
                 WORK
               </Heading>
             </GridItem>
-            {/* {test.map((iteminfo) => (
-              <ResumeProps {...iteminfo} />
-            ))} */}
+            {ResumeData.work.map((iteminfo) => (
+              <ResumeProps key={iteminfo.heading} {...iteminfo} />
+            ))}
           </Grid>
           <Divider borderBottom={"1px"} />
           <Grid
@@ -105,14 +106,19 @@ export const Resume = () => {
               </Heading>
             </GridItem>
             <GridItem colSpan={3}>
-              <Text textAlign={"left"}>Inser tech statment</Text>
+              <Text textAlign={"left"}>
+                {ResumeData.resumeStuff.techStatement}
+              </Text>
             </GridItem>
             <GridItem colSpan={4}>
-              <SimpleGrid columns={{ base: 1, md: 4 }}>
-                <ResmueSkillProps {...test2} />
-                <ResmueSkillProps {...test2} />
-                <ResmueSkillProps {...test2} />
-                <ResmueSkillProps {...test2} />
+              <SimpleGrid
+                columns={{ base: 1, md: 4 }}
+                gap={{ base: 10, md: 15 }}
+                spacing={100}
+              >
+                {ResumeData.resumeStuff.techSkills.map((iteminfo) => (
+                  <ResumeSkillProps key={iteminfo.title} {...iteminfo} />
+                ))}
               </SimpleGrid>
             </GridItem>
           </Grid>

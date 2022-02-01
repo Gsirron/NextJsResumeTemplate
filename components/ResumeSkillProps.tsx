@@ -23,11 +23,17 @@ const ResumeSkillProps = (props: SkillProps) => {
   return (
     <Stack textAlign={"center"}>
       <Flex mx={"auto"} color={"white"} mb={1}>
-        <Image src={image} boxSize="160px" alt={title} />
+        <Image src={image} boxSize="140px" alt={title} />
       </Flex>
 
-      <Text fontWeight={600}>{title}</Text>
-      <Text color={"gray.600"}>{text}</Text>
+      <Text
+        fontWeight={700}
+        fontSize={{ base: "xl", md: "3xl" }}
+        fontStyle={""}
+      >
+        {title}
+      </Text>
+      <Text>{text}</Text>
     </Stack>
   );
 };
