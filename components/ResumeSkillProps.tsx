@@ -10,6 +10,7 @@ import {
   Stack,
   Icon,
   Image,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 interface SkillProps {
@@ -22,18 +23,19 @@ const ResumeSkillProps = (props: SkillProps) => {
   const { title, text, image } = props;
   return (
     <Stack textAlign={"center"}>
-      <Flex mx={"auto"} color={"white"} mb={1}>
+      <Flex mx={"auto"} color={"white"} mb={1} bg={"inherit"}>
         <Image src={image} boxSize="140px" alt={title} />
       </Flex>
 
       <Text
+        textColor={"blackAlpha.900"}
         fontWeight={700}
         fontSize={{ base: "xl", md: "3xl" }}
         fontStyle={""}
       >
         {title}
       </Text>
-      <Text>{text}</Text>
+      <Text textColor={"blackAlpha.900"}>{text}</Text>
     </Stack>
   );
 };

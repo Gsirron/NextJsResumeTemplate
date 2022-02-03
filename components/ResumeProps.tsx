@@ -13,8 +13,11 @@ export const ResumeProps = (props: IResumeProps) => {
   const { heading, name, text, date } = props;
   return (
     <GridItem colSpan={2}>
-      <Heading fontSize={{ base: "2xl", md: "3xl" }}>{heading}</Heading>
+      <Heading textColor={"gray.800"} fontSize={{ base: "2xl", md: "3xl" }}>
+        {heading}
+      </Heading>
       <Heading
+        textColor={"black"}
         mt={"10px"}
         fontStyle={"italic"}
         fontWeight={500}
@@ -24,7 +27,9 @@ export const ResumeProps = (props: IResumeProps) => {
       >
         {`${name} • ${date}`}
       </Heading>
-      <Text>{text}</Text>
+      <Text textColor={"black"} mt={3}>
+        {text}
+      </Text>
     </GridItem>
   );
 };

@@ -105,9 +105,9 @@ const Header3 = () => {
             <Flex alignItems={"center"}>
               {isOpen == false ? (
                 <Stack direction={"row"} spacing={7}>
-                  <Button onClick={toggleColorMode}>
+                  {/* <Button onClick={toggleColorMode}>
                     {colorMode === "light" ? <FaMoon /> : <FaSun />}
-                  </Button>
+                  </Button> */}
                 </Stack>
               ) : null}
             </Flex>

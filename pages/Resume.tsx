@@ -23,32 +23,18 @@ import { ResumeProps } from "../components/ResumeProps";
 import ResmueSkillProps from "../components/ResumeSkillProps";
 import ResumeData from "../components/resumeData";
 import ResumeSkillProps from "../components/ResumeSkillProps";
-
-const test = [
-  {
-    heading: "University of Western Sydney",
-    name: "Bachelor of Computer Science",
-    text: "did work here",
-    date: "2017 - 2020",
-  },
-  {
-    heading: "University of Western Sydney2",
-    name: "Bachelor of Computer Science",
-    text: "did work here",
-    date: "2017 - 2020",
-  },
-];
-
-const test2 = {
-  image: "/images/skill_logos/cpp.svg",
-  title: "TEST 1",
-  text: "test stuff",
-};
+import ConfettiBg from "../components/ConfettiBg";
 
 export const Resume = () => {
   return (
-    <Flex bg={useColorModeValue("gray.200", "gray.800")}>
-      <Box p={{ base: 10, md: 20 }} as={Container} maxW={"5xl"}>
+    <Flex
+      bg={"gray.100"}
+      bgImage={ConfettiBg.CONFETTI_LIGHT}
+      bgAttachment={"fixed"}
+      justify="center"
+      align="center"
+    >
+      <Box p={{ base: 10, md: 20 }} as={Container} maxW={"5xl"} zindex={4}>
         <VStack spacing={"40px"}>
           <Grid
             w={"full"}
@@ -61,7 +47,11 @@ export const Resume = () => {
             mx={"10px"}
           >
             <GridItem rowSpan={2} colSpan={1}>
-              <Heading fontSize={"2xl"} textDecoration={"underline"}>
+              <Heading
+                textColor={"black"}
+                fontSize={"2xl"}
+                textDecoration={"underline"}
+              >
                 EDUCATION
               </Heading>
             </GridItem>
@@ -81,7 +71,11 @@ export const Resume = () => {
             mx={"10px"}
           >
             <GridItem rowSpan={2} colSpan={1}>
-              <Heading fontSize={"2xl"} textDecoration={"underline"}>
+              <Heading
+                textColor={"black"}
+                fontSize={"2xl"}
+                textDecoration={"underline"}
+              >
                 WORK
               </Heading>
             </GridItem>
@@ -101,12 +95,16 @@ export const Resume = () => {
             mx={"10px"}
           >
             <GridItem colSpan={1}>
-              <Heading fontSize={"2xl"} textDecoration={"underline"}>
+              <Heading
+                textColor={"blackAlpha.900"}
+                fontSize={"2xl"}
+                textDecoration={"underline"}
+              >
                 FAVORITE TECH
               </Heading>
             </GridItem>
             <GridItem colSpan={3}>
-              <Text textAlign={"left"}>
+              <Text textColor={"blackAlpha.900"} textAlign={"left"}>
                 {ResumeData.resumeStuff.techStatement}
               </Text>
             </GridItem>

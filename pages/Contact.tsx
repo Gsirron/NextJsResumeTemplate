@@ -27,15 +27,14 @@ export default function ContactForm() {
 
   return (
     <Flex
-      bg={useColorModeValue("gray.100", "gray.900")}
+      bg={"gray.900"}
       align="center"
       justify="center"
+      bgAttachment={"fixed"}
       bgImage={useColorModeValue(
         ConfettiBg.CONFETTI_LIGHT,
         ConfettiBg.CONFETTI_DARK
       )}
-      bgAttachment={"fixed"}
-      id="contact"
     >
       <Box
         borderRadius="lg"

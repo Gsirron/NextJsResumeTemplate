@@ -37,19 +37,19 @@ const About = () => {
             sm: "repeat(3, 1fr)",
             md: "repeat(3, 1fr)",
           }}
-          gap={{ base: 4, md: 10, xl: 10 }}
+          gap={{ base: 4, md: 10 }}
           mx={"10px"}
         >
           <GridItem rowSpan={2} colSpan={1} mx={"auto"}>
             <Avatar
               position={"static"}
               src={"/images/profileNL.jpg"}
-              size="xl"
+              size="3xl"
             />
           </GridItem>
           <GridItem colSpan={2} w={"100%"}>
             <Heading mb={4} fontSize={{ base: "2xl", md: "3xl" }}>
-              About me
+              About Me
             </Heading>
             <Text fontSize={"md"}>{ResumeData.home.bio}</Text>
           </GridItem>
@@ -59,7 +59,9 @@ const About = () => {
               direction={{ base: "column", md: "row" }}
             >
               <VStack align={"left"}>
-                <Heading fontSize={{ base: "xl", md: " 3xl" }}>Contact</Heading>
+                <Heading fontSize={{ base: "2xl", md: " 4xl" }}>
+                  Contact Details
+                </Heading>
                 <Text pt={"4px"}>
                   {ResumeData.home.name} <br />
                   Australia <br /> Sydney NSW <br /> {ResumeData.contact.phone}
