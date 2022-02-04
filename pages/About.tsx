@@ -6,16 +6,12 @@ import {
   Button,
   Text,
   VStack,
-  useBreakpointValue,
   Container,
   Box,
   Heading,
-  SimpleGrid,
   Grid,
   GridItem,
   useColorModeValue,
-  Center,
-  Spacer,
   Link,
   Avatar,
 } from "@chakra-ui/react";
@@ -28,7 +24,12 @@ import Resume from "./Resume";
 
 const About = () => {
   return (
-    <Flex bg={useColorModeValue("gray.300", "gray.900")} pr={"5%"}>
+    <Flex
+      bg={useColorModeValue("gray.300", "gray.900")}
+      pr={"5%"}
+      bgImage={"/images/aboutbg.svg"}
+      bgAttachment={"fixed"}
+    >
       <Box as={Container} maxW={"5xl"}>
         <Grid
           m={{ base: 8, md: 20 }}

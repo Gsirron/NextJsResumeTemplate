@@ -31,10 +31,7 @@ export default function ContactForm() {
       align="center"
       justify="center"
       bgAttachment={"fixed"}
-      bgImage={useColorModeValue(
-        ConfettiBg.CONFETTI_LIGHT,
-        ConfettiBg.CONFETTI_DARK
-      )}
+      bgImage={ConfettiBg.CONFETTI_DARK}
     >
       <Box
         borderRadius="lg"

@@ -1,14 +1,7 @@
-import {
-  Box,
-  Center,
-  Heading,
-  Icon,
-  Image,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Heading, Icon, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineLink } from "react-icons/ai";
+
 interface IProjectProps {
   projectImage: string;
   projectName: string;
