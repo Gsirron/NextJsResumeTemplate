@@ -13,7 +13,23 @@ import {
   useBreakpoint,
   ScaleFade,
 } from "@chakra-ui/react";
-import ResumeData from "../components/resumeData";
+import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from "react-icons/bs";
+import ResumeData from "../components/data/resumeData";
+import SocialButton from "../components/SocialButton";
+import Link from "next/link";
+const social = [
+  {
+    href: "https://www.git.com",
+    icon: BsGithub,
+    label: "github",
+  },
+  {
+    href: "https://www.linkedin.com",
+    icon: BsLinkedin,
+    label: "Linkedin",
+  },
+];
+
 const Home = () => {
   let [onLoad, setOnLoad] = useState(false);
 
@@ -21,10 +37,12 @@ const Home = () => {
     setOnLoad(true);
   });
 
+  const url = "www.google.com";
+
   return (
     <Flex
       w={"full"}
-      h={"80vh"}
+      h={"100vh"}
       flex={1}
       // bgAttachment={"fixed"}
       backgroundSize={"cover"}
@@ -67,7 +85,11 @@ const Home = () => {
               {`I'm a ${ResumeData.home.occupation} based in ${ResumeData.contact.city}`}
             </Text>
             <Divider position={"static"} />
-            <Center></Center>
+            <Center>
+              {social.map((buttoninfo) => (
+                <SocialButton key={buttoninfo.href} {...buttoninfo} />
+              ))}
+            </Center>
           </Stack>
         </ScaleFade>
       </VStack>

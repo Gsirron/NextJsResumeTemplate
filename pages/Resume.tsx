@@ -12,7 +12,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import { ResumeProps } from "../components/ResumeProps";
-import ResumeData from "../components/resumeData";
+import ResumeData from "../components/data/resumeData";
 import ResumeSkillProps from "../components/ResumeSkillProps";
 
 export const Resume = () => {

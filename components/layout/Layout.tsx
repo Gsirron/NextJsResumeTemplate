@@ -1,8 +1,7 @@
 import React from "react";
 import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
-import Header3 from "../pages/Header3";
-import Header from "../components/Header";
-
+import Header from "./header/Header";
+import Footer from "./footer/Footer";
 type DashboardLayoutProps = {
   children: React.ReactNode;
 };
@@ -12,6 +11,7 @@ const Layout = ({ children }: DashboardLayoutProps) => {
     <Box>
       <Header />
       <Box>{children}</Box>
+      <Footer />
     </Box>
   );
 };

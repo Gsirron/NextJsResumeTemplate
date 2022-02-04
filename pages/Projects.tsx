@@ -19,7 +19,11 @@ const testProjectProps = {
 
 export const Projects = () => {
   return (
-    <Flex bg={useColorModeValue("gray.300", "gray.700")}>
+    <Flex
+      bg={useColorModeValue("gray.300", "gray.700")}
+      bgImage={"/images/aboutbg.svg"}
+      bgAttachment="fixed"
+    >
       <Box as={Container} maxW={"5xl"}>
         <VStack py={{ base: 10, md: 30 }}>
           <Box pb={{ base: 10, md: 30 }}>

@@ -12,15 +12,13 @@ import {
   Grid,
   GridItem,
   useColorModeValue,
-  Link,
   Avatar,
 } from "@chakra-ui/react";
-
+import Link from "next/link";
 import React from "react";
 import NextLink from "next/link";
 import { FaDownload } from "react-icons/fa";
-import ResumeData from "../components/resumeData";
-import Resume from "./Resume";
+import ResumeData from "../components/data/resumeData";
 
 const About = () => {
   return (
@@ -45,7 +43,7 @@ const About = () => {
             <Avatar
               position={"static"}
               src={"/images/profileNL.jpg"}
-              size="3xl"
+              size={"2xl"}
             />
           </GridItem>
           <GridItem colSpan={2} w={"100%"}>

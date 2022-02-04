@@ -20,7 +20,7 @@ import {
 import React from "react";
 import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
-import ConfettiBg from "../components/ConfettiBg";
+import ConfettiBg from "../components/data/ConfettiBg";
 
 export default function ContactForm() {
   const { hasCopied, onCopy } = useClipboard("Norris.luong@Hotmail.com");
