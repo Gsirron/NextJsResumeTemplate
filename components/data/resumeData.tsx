@@ -14,7 +14,7 @@ const ResumeData = {
     phone: "0478162776",
     email: "Norris.Luong@hotmail.com",
     resume:
-      "https://drive.google.com/file/d/1rt1OWCsBeUJPtyZi7GYXoK5DOacnWGWa/view?usp=sharing",
+      "https://drive.google.com/file/d/1wyx9cxn-CKbVpWM9tNd9tYOXpnlatFeG/view?usp=sharing",
   },
 
   education: [
@@ -76,12 +76,12 @@ const ResumeData = {
       },
       {
         title: ".NET Core",
-        text: "ASP.NET core is the second backend framework I use",
+        text: "ASP.NET core is the second backend framework I use mainly for Microsoft backend servers and deployments",
         image: "/images/skill_logos/dot-net-core-7.svg",
       },
       {
         title: "Chakra UI",
-        text: "",
+        text: "I use Chakra UI with my react projects for styling and building UI components. Comes with inbuilt light/dark mode and mobile first design. It allows me to design and get a functional UI up quickly. ",
         image: "/images/skill_logos/chakraui-svgrepo-com.svg",
       },
     ],

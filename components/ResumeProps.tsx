@@ -13,14 +13,14 @@ export const ResumeProps = (props: IResumeProps) => {
   const { heading, name, text, date } = props;
   return (
     <GridItem colSpan={2}>
-      <Heading textColor={"gray.800"} fontSize={{ base: "2xl", md: "3xl" }}>
+      <Heading textColor={"blue.700"} fontSize={{ base: "2xl", md: "3xl" }}>
         {heading}
       </Heading>
       <Heading
-        textColor={"black"}
+        textColor={"gray.600"}
         mt={"10px"}
         fontStyle={"italic"}
-        fontWeight={500}
+        fontWeight={600}
         fontSize={{ base: "md", md: "lg" }}
         size="lg"
         lineHeight={1}

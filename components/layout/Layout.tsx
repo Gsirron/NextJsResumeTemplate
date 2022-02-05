@@ -10,7 +10,7 @@ const Layout = ({ children }: DashboardLayoutProps) => {
   return (
     <Box>
       <Header />
-      <Box>{children}</Box>
+      <Box pt={"55px"}>{children}</Box>
       <Footer />
     </Box>
   );
