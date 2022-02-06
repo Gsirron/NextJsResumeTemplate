@@ -56,7 +56,7 @@ export default function ContactForm() {
               <Stack
                 align="center"
                 justify="space-around"
-                direction={{ base: "row", md: "column" }}
+                direction={{ base: "column", md: "row" }}
               >
                 <Tooltip
                   label={hasCopied ? "Email Copied!" : "Copy Email"}
@@ -122,7 +122,7 @@ export default function ContactForm() {
                 </Link>
               </Stack>
 
-              <Box
+              {/* <Box
                 bg={useColorModeValue("white", "gray.700")}
                 borderRadius="lg"
                 p={8}
@@ -175,7 +175,7 @@ export default function ContactForm() {
                     Send Message
                   </Button>
                 </VStack>
-              </Box>
+              </Box> */}
             </Stack>
           </VStack>
         </Box>

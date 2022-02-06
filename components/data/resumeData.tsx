@@ -2,10 +2,13 @@ const ResumeData = {
   home: {
     name: "Norris Luong",
     occupation: "Full Stack Web Developer",
-    description:
-      "Here will be your description. Use this to describe what you do or whatever you feel best describes yourself to a potential employer",
-    bio: "Hi I'm a full stack developer from Sydney Australia. ",
+    description: "Hi I'm a full stack developer from Sydney Australia. ",
+    bio: "Born, bred and raised in Sydney, Australia. I’ve always been an innately curious person who loves to learn, and really get underneath to understand the very fundamentals of how things function. This has led to me to have a huge passion for coding and engineering. I love to create things and have a strong entrepreneurial spirit, which tends to leave me with too many projects going on at the same time. I like to spend my free time hiking, weightlifting, cycling, and learning and experiencing new things. I am an avid traveller and dream of one day being able to work while travelling the world. ",
     profilePic: "/images/profileNL.jpg",
+  },
+  social: {
+    github: "https://github.com/Gsirron",
+    linkedin: "https://www.linkedin.com/in/norris-luong-33b146230/",
   },
   contact: {
     city: "Sydney Australia",
@@ -22,7 +25,7 @@ const ResumeData = {
       name: "Western Sydney University",
       heading: "Bachelor of Computer Science",
       date: "2017 to 2020",
-      text: "I decided to study at Western Sydney University ( WSU) after discovering my passion for coding while working as an engineering intern. Here I took my Bachelors of Computer Science and received a thorough education in concepts, theories and science behind complex programming. The course work and interaction with academic staff and students helped me discover and reinforce my passion for programming.",
+      text: "I decided to study at Western Sydney University ( WSU) after discovering my passion for coding while working as an engineering intern. Here I took my Bachelors of Computer Science and received a thorough education in concepts, theories and science behind complex programming. The course work and interaction with academic staff and students helped me discover and reinforce my passion for programming further.",
     },
     {
       name: "University of Technology Sydney",
@@ -33,16 +36,16 @@ const ResumeData = {
   ],
   work: [
     {
-      heading: "",
-      name: "",
-      date: "",
-      text: "",
+      heading: "Graduate Full Stack Developer",
+      name: "Itechnique, Milsons Point, NSW",
+      date: "March 2021 -  Nov 2021",
+      text: "At Itechnique I worked as a full stack developer in which I collaborated with clients and other teams in providing modern software solutions. I utilised frameworks such as Django and ASP.NET to build modern REST API’s for clients and also worked extensively with React to develop frontend interfaces. I was also responsible for quality assurance of code developed by external teams, which required diagnosing, troubleshooting,bug  fixing and optimisations in which improved performance at times up to 180%.",
     },
     {
-      heading: "",
-      name: "",
-      date: "",
-      text: "",
+      heading: "Intern Civil Engineer ",
+      name: "The Hills Shire Council, Norwest NSW",
+      date: "Jan 2016 -  Dec 2016",
+      text: "My engineering internship at the hills shire council was my first practical exposure to the civil engineering profession. My primary task I was assigned to at the council was to deal with the development implementation of the mandated rain gardens for new residential construction in North Kellyville. This involved extensive collection of data samples and analysis of the waterways in the North Kellyville area. I was also given responsibility for dealing with inquiries regarding the rain gardens implementation. This led me to redesign and clarify the available document which led to a reduction of related inquiries by 65%. Through the data analysis work here, I discovered my knack and love for programming in which I decided to pursue.",
     },
   ],
   resumeStuff: {
@@ -71,12 +74,12 @@ const ResumeData = {
       },
       {
         title: "Typescript",
-        text: "I started using typescript while learning React. I did find it quite annyoing at the start, but it has grown on me since and will to use it. ",
+        text: "I started using Typescript while learning React. I did find it quite annyoing at the start, but it has grown on me since and will to use it. ",
         image: "/images/skill_logos/typescript.svg",
       },
       {
         title: ".NET Core",
-        text: "ASP.NET core is the second backend framework I use mainly for Microsoft backend servers and deployments",
+        text: "ASP.NET core is the second backend framework I use mainly for Microsoft backend servers and deployments.",
         image: "/images/skill_logos/dot-net-core-7.svg",
       },
       {

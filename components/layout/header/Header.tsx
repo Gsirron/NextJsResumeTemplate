@@ -68,13 +68,13 @@ const Header3 = () => {
             </HStack>
 
             <Flex alignItems={"center"}>
-              {isOpen == false ? (
+              {/* {isOpen == false ? (
                 <Stack direction={"row"} spacing={7}>
                   <Button onClick={toggleColorMode}>
                     {colorMode === "dark" ? <FaMoon /> : <FaSun />}
                   </Button>
                 </Stack>
-              ) : null}
+              ) : null} */}
             </Flex>
           </HStack>
         </Flex>

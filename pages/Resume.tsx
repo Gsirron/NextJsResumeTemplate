@@ -99,7 +99,7 @@ export const Resume = () => {
                   FAVORITE TECH
                 </Heading>
               </GridItem>
-              <GridItem colSpan={3}>
+              <GridItem colSpan={{ base: 4, md: 3 }}>
                 <Text textColor={"blackAlpha.900"} textAlign={"left"}>
                   {ResumeData.resumeStuff.techStatement}
                 </Text>

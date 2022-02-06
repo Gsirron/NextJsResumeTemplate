@@ -50,7 +50,9 @@ const About = () => {
             <Heading mb={4} fontSize={{ base: "2xl", md: "3xl" }}>
               About Me
             </Heading>
-            <Text fontSize={"md"}>{ResumeData.home.bio}</Text>
+            <Text fontSize={{ base: "md", md: "lg" }} textColor={"gray.200"}>
+              {ResumeData.home.bio}
+            </Text>
           </GridItem>
           <GridItem colSpan={2}>
             <Stack
@@ -74,7 +76,7 @@ const About = () => {
                   <Button
                     position={"static"}
                     leftIcon={<FaDownload />}
-                    size={"md"}
+                    size={"lg"}
                     borderRadius={"md"}
                     bg={"green.500"}
                     fontWeight={700}
