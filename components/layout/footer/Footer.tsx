@@ -36,7 +36,9 @@ export default function Footer() {
         justify={{ base: "center", md: "space-between" }}
         align={{ base: "center", md: "center" }}
       >
-        <Text>{`© 2022 ${ResumeData.home.name}. All rights reserved`}</Text>
+        <Text
+          textColor={"gray.500"}
+        >{`© 2022 ${ResumeData.home.name}. All rights reserved`}</Text>
         <Box pb={"20px"}>
           <Link
             as={Link2}
@@ -51,10 +53,23 @@ export default function Footer() {
               icon={<BsFillCaretUpFill />}
               isRound
               size={"lg"}
+              border="1px"
+              borderColor={"gray.600"}
+              _hover={{
+                bg: "blue.500",
+                color: useColorModeValue("white", "gray.700"),
+              }}
             />
           </Link>
         </Box>
-        <Stack align="center" justify="space-around" direction={"row"}>
+        <Text textColor={"gray.500"}>
+          {`Backgrounds by `}
+          <a href="https://www.svgbackgrounds.com" color={"green"}>
+            svgbackgrounds
+          </a>
+        </Text>
+
+        {/* <Stack align="center" justify="space-around" direction={"row"}>
           <Tooltip
             label={hasCopied ? "Email Copied!" : "Copy Email"}
             closeOnClick={false}
@@ -117,7 +132,7 @@ export default function Footer() {
               isRound
             />
           </Link>
-        </Stack>
+        </Stack> */}
       </Container>
     </Box>
   );
