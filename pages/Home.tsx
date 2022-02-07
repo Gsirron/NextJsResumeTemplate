@@ -14,18 +14,18 @@ import {
   ScaleFade,
 } from "@chakra-ui/react";
 import ResumeData from "../components/data/resumeData";
-import SocialButton from "../components/SocialButton";
+import SocialButton from "../components/socialmedia/SocialButton";
 
 const Home = () => {
   return (
     <Flex
       w={"full"}
-      h={"100vh"}
+      h={"80vh"}
       flex={1}
       // bgAttachment={"fixed"}
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
-      backgroundImage={"/images/frontbg2.jpg"}
+      backgroundImage={"/images/backgrounds/frontbg2.jpg"}
     >
       <VStack
         as={Container}
@@ -62,7 +62,11 @@ const Home = () => {
             {`I'm a ${ResumeData.home.occupation} based in ${ResumeData.contact.city}`}
           </Text>
           <Divider position={"static"} />
-          <Center></Center>
+          <Center>
+            {ResumeData.social.map((buttoninfo) => (
+              <SocialButton key={buttoninfo.label} {...buttoninfo} />
+            ))}
+          </Center>
         </Stack>
       </VStack>
     </Flex>
