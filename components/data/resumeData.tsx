@@ -1,15 +1,32 @@
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
+
 const ResumeData = {
   home: {
     name: "Norris Luong",
     occupation: "Full Stack Web Developer",
     description: "Hi I'm a full stack developer from Sydney Australia. ",
-    bio: "Born, bred and raised in Sydney, Australia. I’ve always been an innately curious person who loves to learn, and really get underneath to understand the very fundamentals of how things function. This has led to me to have a huge passion for coding and engineering. I love to create things and have a strong entrepreneurial spirit, which tends to leave me with too many projects going on at the same time. I like to spend my free time hiking, weightlifting, cycling, and learning and experiencing new things. I am an avid traveller and dream of one day being able to work while travelling the world. ",
+    bio: "Born, bred and raised in Sydney, Australia. I’ve always been an innately curious person who loves to learn, and really get underneath to understand the very fundamentals of how things function. This has led to me to have a huge passion for coding and engineering. I love to create things and have a strong entrepreneurial spirit, which tends to leave me with too many projects going on at the same time. I like to spend my free time hiking, weightlifting, gardening, and keeping up with the latest technologies. I am an avid traveller and dream of one day being able to work while travelling the world. ",
     profilePic: "/images/profileNL.jpg",
   },
-  social: {
-    github: "https://github.com/Gsirron",
-    linkedin: "https://www.linkedin.com/in/norris-luong-33b146230/",
-  },
+  social: [
+    {
+      href: "mailto:Norris.luong@hotmail.com",
+      label: "Email",
+      icon: MdEmail,
+    },
+    {
+      href: "https://github.com/Gsirron",
+      label: "github",
+      icon: BsGithub,
+    },
+    {
+      href: "https://www.linkedin.com/in/norris-luong-33b146230/",
+      label: "Linkedin",
+      icon: BsLinkedin,
+    },
+  ],
+
   contact: {
     city: "Sydney Australia",
     state: "New South Wales",
@@ -49,7 +66,8 @@ const ResumeData = {
     },
   ],
   resumeStuff: {
-    techStatement: "Here is a list of my favorite software langages and tools",
+    techStatement:
+      "Here is a list of my favourite software languages and tools",
 
     techSkills: [
       {
@@ -59,12 +77,12 @@ const ResumeData = {
       },
       {
         title: "Django",
-        text: "Django is my go to backend framework I use for developing API's. Utilising The Django REST framework an model driven API can be built in a minimal amount of code.",
+        text: "Django is my go to backend framework I use for developing API's. Utilising The Django REST framework an API for an model can be built in a minimal amount of code.",
         image: "/images/skill_logos/django.svg",
       },
       {
         title: "React",
-        text: "I use React for anything front end development related. It's flexible approach to things and its extensive libary makes developing was its main appeal to me.",
+        text: "I use React for anything front end development related. It's flexible approach to things and its extensive library makes developing was its main appeal to me.",
         image: "/images/skill_logos/react-2.svg",
       },
       {
@@ -74,7 +92,7 @@ const ResumeData = {
       },
       {
         title: "Typescript",
-        text: "I started using Typescript while learning React. I did find it quite annyoing at the start, but it has grown on me since and will to use it. ",
+        text: "I started using Typescript while learning React. I did find it quite annoying at the start, but it has grown on me since and I will continue to use it. ",
         image: "/images/skill_logos/typescript.svg",
       },
       {
@@ -89,6 +107,14 @@ const ResumeData = {
       },
     ],
   },
+  projects: [
+    {
+      projectImage: "string",
+      projectName: "string",
+      projectDescription: "string",
+      projectLink: "string",
+    },
+  ],
 };
 
 export default ResumeData;
