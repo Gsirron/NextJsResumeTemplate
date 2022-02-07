@@ -1,3 +1,9 @@
+### NextJS Resume Web App Template
+
+### Description
+
+This is a person resmue website based on NextJs. I have built this using [Chakra ui](https://chakra-ui.com/) for styling while this layout is based on [This](https://github.com/tbakerx/react-resume-template). Data is stored fed directly from a TSX file located in ./components/data and can be customised by anyone just by filling out their own info. 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
