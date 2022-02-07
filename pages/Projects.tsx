@@ -21,7 +21,7 @@ export const Projects = () => {
   return (
     <Flex
       bg={useColorModeValue("gray.300", "gray.700")}
-      bgImage={"/images/aboutbg.svg"}
+      bgImage={"/images/backgrounds/neuraldark.svg"}
       bgAttachment="fixed"
     >
       <Box as={Container} maxW={"5xl"}>

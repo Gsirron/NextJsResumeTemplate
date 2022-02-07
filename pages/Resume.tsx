@@ -19,7 +19,7 @@ export const Resume = () => {
   return (
     <Flex
       bg={"gray.100"}
-      bgImage={"/images/aboutbgwhite.svg"}
+      bgImage={"/images/backgrounds/neuralwhite.svg"}
       bgAttachment={"fixed"}
       justify="center"
       align="center"
@@ -100,7 +100,12 @@ export const Resume = () => {
                 </Heading>
               </GridItem>
               <GridItem colSpan={{ base: 4, md: 3 }}>
-                <Text textColor={"blackAlpha.900"} textAlign={"left"}>
+                <Text
+                  textColor={"blackAlpha.900"}
+                  textAlign={"left"}
+                  fontSize={"xl"}
+                  fontWeight={700}
+                >
                   {ResumeData.resumeStuff.techStatement}
                 </Text>
               </GridItem>

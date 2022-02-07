@@ -1,57 +1,30 @@
 import {
   Box,
-  chakra,
   Container,
   Stack,
   Text,
   useColorModeValue,
-  VisuallyHidden,
   Link,
   IconButton,
   useClipboard,
   Tooltip,
 } from "@chakra-ui/react";
-import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from "react-icons/bs";
+import {
+  BsGithub,
+  BsLinkedin,
+  BsFillCaretUpFill,
+  BsTwitter,
+} from "react-icons/bs";
 import { ReactNode } from "react";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
-
-const SocialButton = ({
-  children,
-  label,
-  href,
-}: {
-  children: ReactNode;
-  label: string;
-  href: string;
-}) => {
-  return (
-    <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      rounded={"full"}
-      w={8}
-      h={8}
-      cursor={"pointer"}
-      as={"a"}
-      href={href}
-      display={"inline-flex"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      transition={"background 0.3s ease"}
-      _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
-      }}
-    >
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </chakra.button>
-  );
-};
-
+import ResumeData from "../../data/resumeData";
+import Scroll from "react-scroll";
+let Link2 = Scroll.Link;
 export default function Footer() {
   const { hasCopied, onCopy } = useClipboard("Norris.luong@Hotmail.com");
   return (
     <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
+      bg={useColorModeValue("gray.500", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
       <Container
@@ -63,8 +36,40 @@ export default function Footer() {
         justify={{ base: "center", md: "space-between" }}
         align={{ base: "center", md: "center" }}
       >
-        <Text>© 2022 Norris Luong. All rights reserved</Text>
-        <Stack align="center" justify="space-around" direction={"row"}>
+        <Text
+          textColor={"gray.500"}
+        >{`© 2022 ${ResumeData.home.name}. All rights reserved`}</Text>
+        <Box pb={"20px"}>
+          <Link
+            as={Link2}
+            to={"Home"}
+            spy={true}
+            smooth={true}
+            activeClass="active"
+          >
+            <IconButton
+              aria-label="To the Top"
+              variant="ghost"
+              icon={<BsFillCaretUpFill />}
+              isRound
+              size={"lg"}
+              border="1px"
+              borderColor={"gray.600"}
+              _hover={{
+                bg: "blue.500",
+                color: useColorModeValue("white", "gray.700"),
+              }}
+            />
+          </Link>
+        </Box>
+        <Text textColor={"gray.500"}>
+          {`Backgrounds by `}
+          <a href="https://www.svgbackgrounds.com" color={"green"}>
+            svgbackgrounds
+          </a>
+        </Text>
+
+        {/* <Stack align="center" justify="space-around" direction={"row"}>
           <Tooltip
             label={hasCopied ? "Email Copied!" : "Copy Email"}
             closeOnClick={false}
@@ -127,7 +132,7 @@ export default function Footer() {
               isRound
             />
           </Link>
-        </Stack>
+        </Stack> */}
       </Container>
     </Box>
   );

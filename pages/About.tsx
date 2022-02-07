@@ -25,7 +25,7 @@ const About = () => {
     <Flex
       bg={useColorModeValue("gray.300", "gray.900")}
       pr={"5%"}
-      bgImage={"/images/aboutbg.svg"}
+      bgImage={"/images/backgrounds/neuraldark.svg"}
       bgAttachment={"fixed"}
     >
       <Box as={Container} maxW={"5xl"}>
@@ -42,7 +42,7 @@ const About = () => {
           <GridItem rowSpan={2} colSpan={1} mx={"auto"}>
             <Avatar
               position={"static"}
-              src={"/images/profileNL.jpg"}
+              src={"/images/profile/profileNL.jpg"}
               size={"2xl"}
             />
           </GridItem>

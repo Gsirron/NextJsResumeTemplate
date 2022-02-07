@@ -31,7 +31,7 @@ export default function ContactForm() {
       align="center"
       justify="center"
       bgAttachment={"fixed"}
-      bgImage={ConfettiBg.CONFETTI_DARK}
+      bgImage={"/images/backgrounds/neuraldark.svg"}
     >
       <Box
         borderRadius="lg"

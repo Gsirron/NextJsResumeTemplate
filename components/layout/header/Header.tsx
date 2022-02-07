@@ -3,8 +3,6 @@ import Scroll from "react-scroll";
 import {
   Box,
   Flex,
-  Link,
-  Button,
   useDisclosure,
   useColorModeValue,
   Stack,
@@ -18,14 +16,7 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FaMoon, FaSun } from "react-icons/fa";
 import Navlink from "./Navlink";
 
-const Links = [
-  "Home",
-  "About",
-  "Resume",
-  "Projects",
-  // "Testimonials",
-  "Contact",
-];
+const Links = ["Home", "About", "Resume", "Projects", "Contact"];
 
 const Header3 = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -68,7 +59,8 @@ const Header3 = () => {
             </HStack>
 
             <Flex alignItems={"center"}>
-              {/* {isOpen == false ? (
+              {/* uncomment this if you want a light/dark mode button
+               {isOpen == false ? (
                 <Stack direction={"row"} spacing={7}>
                   <Button onClick={toggleColorMode}>
                     {colorMode === "dark" ? <FaMoon /> : <FaSun />}
