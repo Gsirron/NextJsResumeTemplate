@@ -24,7 +24,7 @@ export default function Footer() {
   const { hasCopied, onCopy } = useClipboard("Norris.luong@Hotmail.com");
   return (
     <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
+      bg={useColorModeValue("gray.500", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
       <Container
